@@ -2,4 +2,23 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-echo"<h1> ola mundo</h1>";
+use CoffeeCode\Router\Router;
+
+$router = new Router(URL_BASE);
+
+$router->group(null);
+
+$router->get("/", function($data){
+    var_dump($data);
+});
+
+$router->group("ops");
+$router->get("/{errcode}", function ($data){
+    echo "<h1>Erro {$data["errcode"]}</h1>";
+    var_dump($data);
+});
+$router->dispatch();
+
+if ($router->error()) {
+    $router->redirect("/ops/{$router->error()}");
+}

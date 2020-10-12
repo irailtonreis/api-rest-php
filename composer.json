@@ -17,6 +17,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "vlucas/phpdotenv": "^5.2"
+        "vlucas/phpdotenv": "^5.2",
+        "coffeecode/router": "1.0.*"
     }
 }
