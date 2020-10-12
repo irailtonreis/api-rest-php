@@ -1,0 +1,22 @@
+{
+    "name": "irailtonreis/api-rest",
+    "description": "Iniciando api rest php",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Irailton Reis",
+            "email": "irailton.oliveira91@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": ["Source/Config.php"]
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.2"
+    }
+}
