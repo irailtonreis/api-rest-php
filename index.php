@@ -6,17 +6,17 @@ use CoffeeCode\Router\Router;
 
 $router = new Router(URL_BASE);
 
+$router->namespace("Source\App");
 $router->group(null);
 
-$router->get("/", function($data){
-    var_dump($data);
-});
+$router->get("/", "Web:home");
+
+// $router->get("/", function($data){
+//     var_dump($data);
+// });
 
 $router->group("ops");
-$router->get("/{errcode}", function ($data){
-    echo "<h1>Erro {$data["errcode"]}</h1>";
-    var_dump($data);
-});
+$router->get("/{errcode}", "Web:error");
 $router->dispatch();
 
 if ($router->error()) {
