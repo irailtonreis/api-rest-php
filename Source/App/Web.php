@@ -3,7 +3,13 @@
 namespace Source\App;
 
 class Web {
-    public function Home($data){
+    public function Home($data) :void
+    {
+        echo "home";
+    }
+
+    public function contato($data):void
+    {
         echo "teste";
     }
 

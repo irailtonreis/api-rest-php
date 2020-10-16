@@ -9,15 +9,19 @@
             "email": "irailton.oliveira91@gmail.com"
         }
     ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
     "autoload": {
         "psr-4": {
             "Source\\": "source/"
         },
-        "files": ["Source/Config.php"]
+        "files": ["source/Config.php"]
     },
     "minimum-stability": "stable",
     "require": {
         "vlucas/phpdotenv": "^5.2",
-        "coffeecode/router": "1.0.*"
+        "coffeecode/router": "1.0.*",
+        "coffeecode/datalayer": "1.1.*"
     }
 }

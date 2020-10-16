@@ -10,6 +10,7 @@ $router->namespace("Source\App");
 $router->group(null);
 
 $router->get("/", "Web:home");
+$router->get("/contato", "Web:contato");
 
 // $router->get("/", function($data){
 //     var_dump($data);
